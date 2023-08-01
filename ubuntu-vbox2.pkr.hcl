@@ -8,7 +8,7 @@ source "virtualbox-iso" "ubuntu" {
   iso_url           = "ubuntu-20.04.6-live-server-amd64.iso"
   iso_checksum      = "md5:5a4fcbde8b0585d78b3de3cb33bcd874"
   output_directory  = "output_ubuntu_tdhtest"
-  shutdown_command  = "echo '131384' | sudo -S shutdown -P now"
+  shutdown_command  = "echo 'password' | sudo -S shutdown -P now"
   //shutdown_command  = "shutdown -P now"
   //disk_size         = "15000M"
   format            = "ova"
@@ -80,7 +80,7 @@ build {
   sources = ["source.virtualbox-iso.ubuntu"]
   provisioner "shell" {
     // run scripts with sudo, as the default cloud image user is unprivileged
-    execute_command = "echo '131384' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'"
+    execute_command = "echo 'password' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'"
     // NOTE: cleanup.sh should always be run last, as this performs post-install cleanup tasks
     scripts = [
       "cloud-init/src/install.sh" ]
