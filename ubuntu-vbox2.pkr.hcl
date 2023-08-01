@@ -14,8 +14,8 @@ source "virtualbox-iso" "ubuntu" {
   format            = "ova"
   http_directory    = "./ubuntu-temp"
   //headless          = true
-  ssh_username      = "kzuykov"
-  ssh_password      = "131384"
+  ssh_username      = "user"
+  ssh_password      = "password"
   ssh_timeout       = "60m"
   ssh_port          = "22"
   vm_name           = "tdhtest3"
@@ -72,17 +72,7 @@ boot_command = [
 //            " -- <wait>",
 //            "<enter><wait>",
 //            "<tab><tab><tab><tab><tab><enter><wait>",
-//            "<enter>",
-//            "<tab><enter>",
-//            "kzuykov<tab>",
-//            "ubuntu<tab>",
-//            "kzuykov<tab>",
-//            "131384<tab>",
-//            "131384<tab>",
-//            "<enter><wait15s>",
-//            "<space><space><wait15s><tab><enter>",
-//            "<enter>",
-//            "<tab><enter>"
+
 ]
 }
 

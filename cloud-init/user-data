@@ -17,8 +17,8 @@ autoinstall:
                     dhcp4: true
     identity:
         hostname: ubuntu-server
-        username: kzuykov
-        password: $6$rounds=4096$3mzZl2GrylpHcn02$61PVld/kwxNTiIEElzDAkhkWTz4sulpsL3hUbpfpgFQUf74ydXGdbgkJ3581SQJYRqyHyzvLlZpich.LxmrNz.
+        username: user
+        password: $6$rounds=4096$YsWW4EdGwaRQCQye$UY4yJ4cOZNNqv9PWzlVz3WjWKEfyXiYhrVHzyRwMOWJstt5iOJZegUkKn0I3406tqNkWKT6iaVYCSvzYfrrIJ1
     ssh:
         install-server: yes
         allow-pw: yes
